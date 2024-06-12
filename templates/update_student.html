@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    {% if student %}
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ student.name }}" required><br><br>
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" value="{{ student.marks }}" required step="any"><br><br>
+        <button type="submit">Update Student</button>
+    </form>
+    {% else %}
+    <p>Student not found.</p>
+    {% endif %}
+</body>
+</html>
